@@ -25,4 +25,8 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+  def authenticated?(remeber_token)
+    BCrypt::Password.new(remember_digest).is_password?(remeber_token)
+  end
 end

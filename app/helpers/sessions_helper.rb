@@ -37,7 +37,7 @@ module SessionsHelper
     cookies.permanent[:remember_token] = user.remember_token
   end
 
-  def authenticated?(remeber_token)
-    BCrypt::Password.new(remeber_digest).is_password?(remeber_token)
-  end
+  # def authenticated?(remeber_token)
+  #   BCrypt::Password.new(remeber_digest).is_password?(remeber_token)
+  # end
 end
