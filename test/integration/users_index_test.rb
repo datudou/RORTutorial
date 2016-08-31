@@ -15,7 +15,4 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
       assert_select 'a[href=?]', user_path(user), text: user.name
     end
   end
-  # test "the truth" do
-  #   assert true
-  # end
 end
